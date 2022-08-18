@@ -1,13 +1,13 @@
 {
   "name": "hello-lemoncoder",
   "version": "1.0.0",
-  "description": "",
+  "description": "Node.js en Docker",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "",
+  "author": "lsmcba@gmail.com",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1"
