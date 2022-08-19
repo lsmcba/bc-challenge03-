@@ -1,13 +1,12 @@
-/* global __dirname */
 var express = require('express');
 var app = express();
 
-//static files
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res) {
     res.sendFile(__dirname + '/index.html')
 });
 
-app.listen(4000, '0.0.0.0');
-console.log('Example app listening on port 4000!');
+app.listen(4000, function() {
+console.log('Corriendo en http://localhost:4000');
+});
