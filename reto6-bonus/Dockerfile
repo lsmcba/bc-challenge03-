@@ -1,3 +1,3 @@
-FROM mongo:latest
-
-CMD mongoimport -jsonArray -db mongo -collection Books -file ./books.json
+FROM nginx:alpine
+	
+COPY /bootcamp-web/. /usr/share/nginx/html
