@@ -25,8 +25,7 @@ echo "Descargamos la imagen y creamos el contenedor Pyton"
 
 #docker volume create static_content
 docker build -t lsmcba/pokepy-reto8:1.0 .
-# docker run -d --name pokepy-reto8 -v static_content:/usr/share/nginx/html -p 5000:5000 lsmcba/pokepy-reto8:1.0
-docker run -it -p 5000:5000 lsmcba/pokepy-reto8:1.0
+ docker run -d --name pokepy-reto8 -p 5000:5000 lsmcba/pokepy-reto8:1.0
 echo "Contenedor Creado ...."
 docker ps -a
 docker images
@@ -37,7 +36,7 @@ echo "--------------------------------------------------------------------------
 
 echo "Iniciamos el docker e ingresamos a la pagina"
 docker start pokepy-reto8
-google-chrome --disable-gpu http://localhost:5000
+#google-chrome --disable-gpu http://localhost:5000
 echo "Saliendo de la pagina ...."
 sleep 5
 
