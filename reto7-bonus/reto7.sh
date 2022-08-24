@@ -1,11 +1,11 @@
 #!/bin/bash
 
-docker run -d --name web -p 8000 php:7.4-apache
+docker volume create static_content
+docker build -t web .
+docker run -d --name web -v static_content:/usr/share/nginx/html -p 8000:80 web
 
 docker start web
-docker exec -it web bash
+docker exec -it web bash 
 
-apt update
-apt-get install nano
-nano index.html
-tail index.html
+#nano index.html
+#tail index.html

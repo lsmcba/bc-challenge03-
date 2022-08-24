@@ -1,3 +1,7 @@
-FROM httpd:alpine
+FROM php:apache
 
-COPY index.html /
+RUN apt update && apt-get install nano
+
+EXPOSE 8000
+
+COPY content/ /var/www/html/
